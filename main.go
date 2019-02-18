@@ -13,7 +13,7 @@ func randomNumber(rmode bool) int {
 	if rmode == false {
 		seedVar = int64(time.Now().Day())
 	} else {
-		seedVar = time.Now().Unix()
+		seedVar = time.Now().UnixNano()
 	}
 
 	rand.Seed(seedVar)
