@@ -12,7 +12,7 @@ Just execute the programm:
 $ chmod +x rlp_linux_amd64
 $ ./rlp_linux_amd64
 ```
-
+```
 Usage:
 	rlp [global options]
 
@@ -21,3 +21,4 @@ GLOBAL OPTIONS:
 
 GLOBAL OPTIONS for Windows Users:
 	-absolutely-random     Enable real Roman mode (use absolute randomness mode (a bool))
+```
