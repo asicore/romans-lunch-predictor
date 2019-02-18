@@ -4,22 +4,36 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
+	"flag"
 )
 
-func ranswer() int {
-	rand.Seed(int64(time.Now().Day()))
+func randomNumber(rmode bool) int {
+	var seedVar int64
+
+	if rmode == false {
+		seedVar = int64(time.Now().Day())
+	} else {
+		seedVar = time.Now().Unix()
+	}
+
+	rand.Seed(seedVar)
 	return rand.Intn(2)
 }
 
 func main() {
-	var x string
+	var romanMode *bool
+	var answer string
 
-	if ranswer() == 0 {
-		x = "No"
+	romanMode = flag.Bool("absolutely-random", false, "Use absolute randomness mode (a bool)")
+	flag.Parse()
+
+	if randomNumber(*romanMode) == 0 {
+		answer = "No"
 	} else {
-		x = "Yes"
+		answer = "Yes"
 	}
+
 	fmt.Println(time.Now().Date())
 	fmt.Println("Is Roman going to lunch today?")
-	fmt.Println(x)
+	fmt.Println(answer)
 }
