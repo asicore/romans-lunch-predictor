@@ -20,5 +20,5 @@ GLOBAL OPTIONS:
 	--absolutely-random	Enable real Roman mode (use absolute randomness mode (a bool))
 
 GLOBAL OPTIONS for Windows Users:
-	-absolutely-random     Enable real Roman mode (use absolute randomness mode (a bool))
+	-absolutely-random      Enable real Roman mode (use absolute randomness mode (a bool))
 ```
